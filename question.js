@@ -10,10 +10,8 @@ const choiceD = document.getElementById("D");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
 
-
-//var timer = document.getElementById("timer")
-// create our questions
-let questions = [
+// create questions
+questions = [
     {
         question : "Commonly used data types DO NOT include:",
         choiceA : "strings",
@@ -98,7 +96,7 @@ function startQuiz(){
     quiz.style.display = "block";
     renderProgress();
     renderCounter();
-    TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
+    TIMER = setInterval(renderCounter,1000); 
 }
 
 // render progress
@@ -115,7 +113,7 @@ function renderCounter(){
         count++;
     }else{
         count = 0;
-        // change progress color to red
+   
         answerIsWrong();
         if(runningQuestion < lastQuestion){
             runningQuestion++;
@@ -133,13 +131,12 @@ function renderCounter(){
 
 function checkAnswer(answer){
     if( answer == questions[runningQuestion].correct){
-        // answer is correct
+ 
         score++;
-        // change progress color to green
+       
         answerIsCorrect();
     }else{
-        // answer is wrong
-        // change progress color to red
+        
         answerIsWrong();
     }
     count = 0;
@@ -170,14 +167,13 @@ function scoreRender(){
     // calculate the amount of question percent answered by the user
     const scorePerCent = Math.round(100 * score/questions.length);
     
-    // choose the image based on the scorePerCent
+
     img = (scorePerCent >= 80) ? "img/5.png" :
     (scorePerCent >= 60) ? "img/4.png" :
     (scorePerCent >= 40) ? "img/3.png" :
     (scorePerCent >= 20) ? "img/2.png" :
     "img/1.png";
     
-    //scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
 }
 
