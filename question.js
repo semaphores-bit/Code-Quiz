@@ -3,6 +3,10 @@ const start = document.getElementById("start");
 const text = document.getElementById("text");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
+const rdA = document.getElementById("rdA");
+const rdB = document.getElementById("rdB");
+const rdC = document.getElementById("rdC");
+const rdD = document.getElementById("rdD");
 const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
 const choiceC = document.getElementById("C");
@@ -83,6 +87,10 @@ function renderQuestion(){
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
     choiceD.innerHTML = q.choiceD;
+    rdA.checked = false;
+    rdB.checked = false;
+    rdC.checked = false;
+    rdD.checked = false;
 }
 
 start.addEventListener("click",startQuiz);

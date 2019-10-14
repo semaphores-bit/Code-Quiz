@@ -24,10 +24,10 @@
             <div id="question"></div>
     
             <div id="choices">
-                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
-                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
-                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
-                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+                    <input type="radio" name="choice" id="rdA" onclick="checkAnswer('A')"><span class="choice" id="A" onclick="checkAnswer('A')"></span></input> <br>
+                    <input type="radio" name="choice" id="rdB" onclick="checkAnswer('B')"><span class="choice" id="B" onclick="checkAnswer('B')"></span></input> <br>
+                    <input type="radio" name="choice" id="rdC" onclick="checkAnswer('C')"><span class="choice" id="C" onclick="checkAnswer('C')"></span></input> <br>
+                    <input type="radio" name="choice" id="rdD" onclick="checkAnswer('D')"><span class="choice" id="D" onclick="checkAnswer('D')"></span></input> <br>
             </div>
             <p id="timer"></p>
                 <div id="counter"></div>
@@ -40,7 +40,9 @@
         </div>
         <div id="scoreContainer" style="display: none"></div>
         
-            
+        Enter initial         
+        <input placeholder="Initial" id="initial"/>
+        <buton type="button" id="submit-btn">Submit</buton>     
         
         <form>    
             <button id="back">Go Back</button>
